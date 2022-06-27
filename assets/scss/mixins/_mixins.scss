@@ -1,0 +1,21 @@
+@use "../presets" as *;
+
+@mixin abs-pos($t: 0, $r: 0, $b: 0, $l: 0) {
+  position: absolute;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+}
+
+@mixin separator {
+  content: "";
+  display: inline-block;
+  position: relative;
+  right: 5px;
+  bottom: 1px;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: $color-gray-separator;
+}

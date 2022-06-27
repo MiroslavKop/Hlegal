@@ -1,0 +1,54 @@
+@use "presets" as *;
+@use "mixins" as *;
+
+.page-header {
+  background: linear-gradient($bg-gradien1);
+  @include sm-min {
+    &::before {
+      content: "";
+      @include abs-pos;
+      background-image: url(../img/home/header/header-background.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 100%;
+      background-size: 86vh;
+    }
+  }
+  &::after {
+    content: "";
+    @include abs-pos(70%);
+    background: linear-gradient(to top, $color-primary 0%, transparent 100%);
+    z-index: 1;
+  }
+  &__content {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    &-title {
+      position: absolute;
+      max-width: 620px;
+      font-size: 38px;
+      text-align: center;
+      color: $color-white;
+      font-weight: 500;
+      padding: $gap;
+      margin: 0;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &-img {
+      margin-top: 200px;
+      margin-bottom: -20px;
+    }
+  }
+  &__button {
+    position: absolute;
+    left: 50%;
+    bottom: $gap;
+    z-index: 2;
+    transform: translateX(-50%);
+  }
+}

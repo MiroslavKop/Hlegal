@@ -1,0 +1,30 @@
+@use "../presets" as *;
+
+%container {
+  max-width: $ul;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $gap;
+  padding-right: $gap;
+}
+
+%separator {
+  content: "";
+  display: inline-block;
+  position: relative;
+  right: 8px;
+  bottom: 1px;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: $color-gray-separator;
+}
+
+%text-liner-gradient {
+  background: linear-gradient($text-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
