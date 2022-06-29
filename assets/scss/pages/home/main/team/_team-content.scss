@@ -1,0 +1,64 @@
+@use "presets" as *;
+@use "mixins" as *;
+
+.team__content {
+  display: flex;
+  flex-direction: column;
+
+  &-link {
+    padding-top: 20px;
+
+    @include md-min {
+      padding-top: 40px;
+    }
+    a {
+      @extend %link-page;
+      color: $color-act-regular;
+      img {
+        @extend %link-page__img;
+      }
+    }
+  }
+  &-title {
+    @extend %text-liner-gradient2;
+    font-size: 32px;
+    line-height: 38px;
+    @include md-min {
+      font-size: 42px;
+      line-height: 50px;
+    }
+    @include md-sm {
+      font-size: 34px;
+    }
+  }
+  &-worker {
+    @include md-min {
+      padding-top: 20px;
+    }
+    @include sm {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-top: 10px;
+      padding-bottom: 20px;
+    }
+  }
+  .worker__name1 {
+    font-size: 18px;
+    color: $color-gray-text;
+    @include sm {
+      display: none;
+    }
+  }
+  .worker__name2 {
+    font-size: 18px;
+    color: $color-gray-text;
+    @include sm-min {
+      display: none;
+    }
+  }
+  .worker__job {
+    font-size: 16px;
+    color: $color-gray-text;
+  }
+}

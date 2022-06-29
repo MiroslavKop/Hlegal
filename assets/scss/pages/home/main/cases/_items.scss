@@ -1,0 +1,67 @@
+@use "presets" as *;
+@use "mixins" as *;
+
+.cases__main {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-gray-bg;
+  @include lg-xs {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-top: 3px solid $color-white;
+    padding: $gap;
+    gap: $gap;
+    @include lg-min {
+      height: 200px;
+    }
+  }
+  &-title {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-accent;
+    padding: $gap;
+  }
+}
+.cases__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: $color-gray-bg;
+  padding: 20px;
+  gap: 20px;
+  @include lg-sm {
+    min-height: 200px;
+  }
+  @include sm-xs {
+    min-height: 170px;
+  }
+  @include lg-xs {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    &:nth-child(1) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+
+  &-description {
+    font-size: 18px;
+    color: $color-primary-soft;
+    font-weight: 500;
+    @include sm-min {
+      font-size: 24px;
+    }
+  }
+  &-link {
+    font-size: 18px;
+    color: $color-gray-text;
+  }
+}

@@ -20,8 +20,29 @@
   background-color: $color-gray-separator;
 }
 
+%link-page {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  %link-page__img {
+    position: relative;
+    top: 0.9px;
+    left: 5px;
+  }
+}
+
 %text-liner-gradient {
-  background: linear-gradient($text-gradient);
+  background: linear-gradient($text-gradient1);
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+%text-liner-gradient2 {
+  background: linear-gradient($text-gradient2);
   -webkit-background-clip: text;
   background-clip: text;
 

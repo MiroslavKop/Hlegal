@@ -1,0 +1,73 @@
+@use "presets" as *;
+@use "mixins" as *;
+.services {
+  position: relative;
+  background: linear-gradient($bg-gradient2);
+  border-radius: 0px 0px 12px 12px;
+  padding-top: 80px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    right: 20px;
+    height: 10px;
+    background-color: $background-services1;
+    border-radius: 0px 0px 12px 12px;
+    z-index: 2;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 40px;
+    right: 40px;
+    height: 20px;
+    background-color: $background-services2;
+    border-radius: 0px 0px 12px 12px;
+  }
+  &__container {
+    @extend %container;
+  }
+  &__page-link {
+    a {
+      @extend %link-page;
+      color: $color-gray-text;
+      img {
+        @extend %link-page__img;
+      }
+    }
+  }
+  &__grid {
+    display: grid;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    gap: 90px 40px;
+
+    @include md-min {
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 70px;
+      padding-bottom: 80px;
+    }
+
+    @include md-sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      gap: 40px;
+    }
+  }
+  &__page-title {
+    @extend %text-liner-gradient;
+    font-size: 32px;
+    line-height: 38px;
+    @include md-min {
+      font-size: 42px;
+      width: max-content;
+    }
+    @include md-sm {
+      font-size: 36px;
+    }
+  }
+}
