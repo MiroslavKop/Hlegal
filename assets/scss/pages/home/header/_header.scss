@@ -30,6 +30,7 @@
       position: absolute;
       max-width: 620px;
       font-size: 38px;
+      width: 100%;
       text-align: center;
       color: $color-white;
       font-weight: 500;
@@ -40,7 +41,6 @@
       transform: translate(-50%, -50%);
     }
     &-img {
-      margin-bottom: -20px;
     }
   }
   &__button {

@@ -474,6 +474,7 @@ body a {
   position: absolute;
   max-width: 620px;
   font-size: 38px;
+  width: 100%;
   text-align: center;
   color: #ffffff;
   font-weight: 500;
@@ -484,9 +485,6 @@ body a {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-.page-header__content-img {
-  margin-bottom: -20px;
 }
 .page-header__button {
   position: absolute;
@@ -665,7 +663,6 @@ body a {
 .slider__note {
   position: absolute;
   z-index: -9999;
-  min-height: 300px;
   opacity: 0;
 }
 .slider__note.active {
@@ -1560,6 +1557,9 @@ body a {
   }
 }
 @media (max-width: 575.8px) {
+  .slider__note {
+    min-height: 250px;
+  }
   .cases__line-1 {
     grid-template-columns: 1fr;
   }

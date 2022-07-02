@@ -96,7 +96,9 @@
   &__note {
     position: absolute;
     z-index: -9999;
-    min-height: 300px;
+    @include xs {
+      min-height: 250px;
+    }
 
     opacity: 0;
 
