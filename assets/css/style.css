@@ -343,7 +343,7 @@ template {
   left: 5px;
 }
 
-.footer__locations a:hover, .footer__mail a:hover {
+.footer__locations a:hover, .footer__mail a:hover, .navbar__menu-link:hover {
   color: #f0145a;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -496,6 +496,7 @@ body a {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
+  cursor: pointer;
 }
 
 .navbar {
@@ -595,6 +596,10 @@ body a {
   padding: 6px 6px 5px 7px;
   border-radius: 8px;
 }
+.navbar__actions-language-link:hover {
+  background-color: #ededf7;
+  color: #b3b3ba;
+}
 .navbar__actions-language-link.active {
   background-color: #f0145a;
   color: #ffffff;
@@ -602,6 +607,12 @@ body a {
 .navbar__actions-phone-link {
   font-weight: 700;
   white-space: nowrap;
+}
+.navbar__actions-social-img {
+  color: #ffffff;
+}
+.navbar__actions-social-img:hover {
+  color: #f0145a;
 }
 
 .experience {
@@ -654,6 +665,7 @@ body a {
 .slider__note {
   position: absolute;
   z-index: -9999;
+  min-height: 300px;
   opacity: 0;
 }
 .slider__note.active {
@@ -692,7 +704,6 @@ body a {
   background: -o-linear-gradient(230deg, #323264 12%, #323264 57%, #643e72 87%);
   background: linear-gradient(220deg, #323264 12%, #323264 57%, #643e72 87%);
   border-radius: 0px 0px 12px 12px;
-  padding-top: 80px;
 }
 .services::before {
   content: "";
@@ -727,6 +738,7 @@ body a {
 .services__page-title {
   font-size: 32px;
   line-height: 38px;
+  padding-top: 10px;
 }
 
 .services__item {

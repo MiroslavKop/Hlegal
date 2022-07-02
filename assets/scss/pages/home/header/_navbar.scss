@@ -123,6 +123,7 @@
     }
     &-link {
       display: block;
+      @extend %hover-link;
 
       @include sm {
         margin: $gap 0;
@@ -156,6 +157,10 @@
       display: block;
       padding: 6px 6px 5px 7px;
       border-radius: 8px;
+      &:hover {
+        background-color: $color-gray-bgalt;
+        color: $color-gray-text;
+      }
       &.active {
         background-color: $color-accent;
         color: $color-white;
@@ -189,6 +194,12 @@
       }
       @include sm {
         display: none;
+      }
+    }
+    &-social-img {
+      color: $color-white;
+      &:hover {
+        color: $color-accent;
       }
     }
   }

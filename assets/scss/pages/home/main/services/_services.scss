@@ -4,7 +4,6 @@
   position: relative;
   background: linear-gradient($bg-gradient2);
   border-radius: 0px 0px 12px 12px;
-  padding-top: 80px;
 
   &::before {
     content: "";
@@ -62,6 +61,7 @@
     @extend %text-liner-gradient;
     font-size: 32px;
     line-height: 38px;
+    padding-top: 10px;
     @include md-min {
       font-size: 42px;
       width: max-content;
