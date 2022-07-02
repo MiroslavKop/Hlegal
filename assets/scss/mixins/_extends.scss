@@ -31,6 +31,12 @@
     left: 5px;
   }
 }
+%hover-link {
+  &:hover {
+    color: $color-accent;
+    transition: 0.5s;
+  }
+}
 
 %text-liner-gradient {
   background: linear-gradient($text-gradient1);

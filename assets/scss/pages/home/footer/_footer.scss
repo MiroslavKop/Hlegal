@@ -1,0 +1,117 @@
+@use "presets" as *;
+@use "mixins" as *;
+
+.page-footer {
+  background-color: $color-gray-bg;
+}
+.footer__container {
+  @extend %container;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  border-top: 4px solid $color-gray-separator;
+  @include md {
+    padding-bottom: 120px;
+  }
+}
+.footer__grid {
+  display: grid;
+  @include md-min {
+    grid-template-areas: "map rights" "links rights";
+    row-gap: $gap;
+  }
+  @include md {
+    grid-template-areas: "map" "links" "rights";
+  }
+}
+.footer__locations-adress {
+  color: #323264;
+}
+.footer__locations {
+  grid-area: map;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  a {
+    @extend %hover-link;
+  }
+  @include md {
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 20px;
+  }
+}
+.footer__locations-link {
+  a {
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-act-regular;
+    @include md-min {
+      &::before {
+        @include separator;
+        background-color: $color-gray-text;
+        right: 10px;
+      }
+    }
+  }
+}
+.footer__links {
+  grid-area: links;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  @include md {
+    flex-direction: column;
+    gap: $gap;
+    padding-bottom: $gap;
+  }
+}
+.footer__phone {
+  a {
+    font-weight: 700;
+    color: $color-primary-alt;
+    @include md-min {
+      &::before {
+        @include separator;
+        background-color: $color-gray-text;
+        right: 10px;
+      }
+    }
+    &:hover {
+      color: black;
+      transition: 0.5s;
+    }
+  }
+}
+.footer__mail {
+  @include md-min {
+    &::before {
+      @include separator;
+      background-color: $color-gray-text;
+      right: 10px;
+    }
+  }
+  a {
+    font-weight: 700;
+    color: $color-act-regular;
+    @extend %hover-link;
+  }
+}
+
+.footer__rights {
+  grid-area: rights;
+  display: flex;
+  justify-content: flex-end;
+  color: $color-gray-text;
+  @include md {
+    justify-content: center;
+    text-align: center;
+  }
+}
+.footer__socials-img {
+  color: $color-act-regular;
+  &:hover {
+    color: $color-accent;
+  }
+}

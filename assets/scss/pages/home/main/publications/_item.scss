@@ -1,0 +1,62 @@
+@use "presets" as *;
+@use "mixins" as *;
+
+.publication__item {
+  display: inline-block;
+  max-width: 415px;
+  background-color: $color-white;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  @include xs {
+    margin-bottom: 20px;
+  }
+  &-block {
+    @include xs {
+      display: none;
+    }
+  }
+  &-order {
+    order: 2;
+  }
+  &-title {
+    font-weight: 400;
+    font-size: 18px;
+    color: $color-act-regular;
+    padding-top: $gap;
+    padding-left: $gap;
+    padding-right: $gap;
+    &:hover {
+      color: $color-accent;
+      transition: 0.5s;
+    }
+  }
+  &-data {
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-gray-text;
+    margin-top: 10px;
+    margin-left: $gap;
+    margin-right: $gap;
+    padding-bottom: $gap;
+    @include xs-min {
+      border-bottom: 4px solid $color-gray-separator;
+    }
+  }
+  &-description {
+    line-height: 22px;
+    color: $color-black;
+    margin-top: $gap;
+    padding-left: $gap;
+    padding-right: $gap;
+    margin-bottom: $gap;
+    @include xs {
+      display: none;
+    }
+  }
+  &-img {
+    width: 100%;
+    display: block;
+  }
+}
