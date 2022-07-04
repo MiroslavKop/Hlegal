@@ -3,6 +3,7 @@
 
 .page-header {
   background: linear-gradient($bg-gradien1);
+  position: relative;
   @include sm-min {
     &::before {
       content: "";
@@ -10,7 +11,7 @@
       background-image: url(../img/home/header/header-background.svg);
       background-repeat: no-repeat;
       background-position: 50% 100%;
-      background-size: 86vh;
+      background-size: 85vh;
     }
   }
   &::after {
@@ -26,6 +27,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    z-index: 1;
     &-title {
       position: absolute;
       max-width: 620px;
