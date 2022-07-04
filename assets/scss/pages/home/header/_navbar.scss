@@ -167,15 +167,18 @@
       }
     }
     &-locations {
-      &::before {
-        @extend %separator;
+      text-align: center;
+      @include lg-min {
+        &::before {
+          @include separator;
+        }
       }
       @include sm {
         display: none;
       }
     }
     &-phones {
-      @include sm-min {
+      @include lg-min {
         &::before {
           @include separator;
         }
@@ -186,7 +189,7 @@
       white-space: nowrap;
     }
     &-socials {
-      @include sm-min {
+      @include lg-min {
         &::before {
           @include separator;
           bottom: 5px;

@@ -1,0 +1,35 @@
+@use "presets" as *;
+@use "mixins" as *;
+.navbar__logo-light {
+  grid-area: logo;
+  img {
+    width: 100%;
+  }
+}
+.navbar__menu-link-light {
+  color: $color-act-regular;
+  @extend %hover-link;
+}
+
+.navbar__actions-language-link-light {
+  color: $color-gray-text;
+}
+.navbar__actions-location-link-light {
+  color: $color-gray-text;
+}
+.accent {
+  color: $color-accent;
+  border-bottom: 2px solid $color-accent;
+}
+.navbar__actions-phone-link-light {
+  color: $color-gray-text;
+}
+.navbar__actions-social-img-light {
+  color: $color-gray-text;
+  &:hover {
+    color: $color-accent;
+  }
+}
+.navbar__menu-btn-row-light {
+  background-color: $color-primary;
+}
