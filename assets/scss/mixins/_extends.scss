@@ -38,6 +38,13 @@
   }
 }
 
+%hover-slider {
+  &:hover {
+    background: $color-act-regular;
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
 %text-liner-gradient {
   background: linear-gradient($text-gradient1);
   -webkit-background-clip: text;

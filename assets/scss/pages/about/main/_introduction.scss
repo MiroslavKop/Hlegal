@@ -2,7 +2,10 @@
 @use "mixins" as *;
 
 .about {
-  padding-top: 185px;
+  padding-top: 250px;
+  @include md-xs {
+    padding-top: 180px;
+  }
   @include xs {
     padding-top: 150px;
   }
