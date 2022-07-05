@@ -9,8 +9,9 @@
     padding-top: 30px;
     padding-bottom: 40px;
     border-top: 4px solid $color-gray-separator;
+    margin: 0 20px;
     @include md {
-      padding-bottom: 120px;
+      padding-bottom: 40px;
     }
   }
   &__grid {

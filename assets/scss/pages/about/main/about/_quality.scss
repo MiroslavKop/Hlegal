@@ -1,0 +1,57 @@
+@use "presets" as *;
+@use "mixins" as *;
+
+.quality {
+  margin-top: 80px;
+  @include md {
+    margin-top: $gap;
+  }
+  &__container {
+    @extend %container;
+    display: flex;
+    gap: 40px;
+    @include md-min {
+      margin: 0 120px;
+    }
+    @include md-xs {
+      flex-direction: column-reverse;
+      gap: $gap;
+    }
+    @include xs {
+      flex-direction: column;
+      gap: $gap;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+    @include md-min {
+      flex-basis: 690px;
+    }
+  }
+  &__content-description {
+    font-size: 18px;
+    line-height: 26px;
+    color: $color-black;
+    @include md-min {
+      font-size: 21px;
+      line-height: 30px;
+    }
+  }
+  &__title {
+    margin: 0;
+    @extend %text-liner-gradient2;
+    font-size: 32px;
+    line-height: 38px;
+    @include md-min {
+      font-size: 42px;
+      line-height: 50px;
+      flex-basis: 410px;
+    }
+    @include md-sm {
+      font-size: 34px;
+      text-align: center;
+    }
+  }
+}

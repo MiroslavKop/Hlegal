@@ -13,7 +13,6 @@
 
   &__container {
     @extend %container;
-    border-bottom: 4px solid $color-gray-separator;
     padding-bottom: 20px;
   }
   &__page-link {

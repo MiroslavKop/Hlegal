@@ -1,7 +1,7 @@
 @use "presets" as *;
 @use "mixins" as *;
 
-.about__photo {
+.banner__photo {
   background-image: url(../img/about/main/photo.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -10,13 +10,15 @@
 
   @include lg-min {
     margin-top: 100px;
+    background-size: 100%;
   }
   @include xs {
     background-image: url(../img/about/main/photo-sm.png);
     background-size: cover;
   }
 }
-.about__title {
+.banner__title {
+  margin: 0;
   font-size: 96px;
   line-height: 113px;
   text-align: center;

@@ -12,11 +12,11 @@ html {
 }
 body {
   line-height: 1.2;
+  transition: transform 0.25s;
   &.active {
     overflow: hidden;
 
     transform: translateX(-$mobile-menu-size);
-    transition: 1s;
 
     &::before {
       position: absolute;
