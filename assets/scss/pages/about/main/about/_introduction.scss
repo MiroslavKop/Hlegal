@@ -3,6 +3,7 @@
 
 .introduction {
   padding-top: 250px;
+
   @include md-xs {
     padding-top: 180px;
   }
@@ -10,35 +11,43 @@
     padding-top: 150px;
   }
   &__container {
-    @extend %container;
     display: flex;
-    gap: $gap;
     flex-direction: column;
+
+    @extend %container;
+    gap: $gap;
     @include md-min {
-      margin: 0 120px;
-      gap: 40px;
       flex-direction: row;
+
+      margin: 0 120px;
+
+      gap: 40px;
     }
     @include md-xs {
       align-items: center;
       justify-content: center;
+
       text-align: center;
     }
   }
   &__info {
     display: flex;
     flex-direction: column;
+
     gap: 10px;
     @include md-min {
       flex-basis: 690px;
-      gap: 20px;
+
+      gap: $gap;
     }
   }
   &__info-title {
     margin: 0;
-    @extend %text-liner-gradient2;
+
     font-size: 32px;
     line-height: 38px;
+
+    @extend %text-liner-gradient2;
     @include md-min {
       font-size: 42px;
       line-height: 50px;
@@ -48,9 +57,11 @@
     }
   }
   &__info-description {
+    color: $color-black;
+
     font-size: 18px;
     line-height: 26px;
-    color: $color-black;
+
     @include md-min {
       font-size: 21px;
       line-height: 30px;
@@ -59,20 +70,28 @@
   &__advantages {
     display: flex;
     flex-direction: column;
+
     height: max-content;
+
     @include xs {
-      gap: 30px;
       padding-top: 20px;
+
+      gap: 30px;
     }
     @include md-min {
-      border-left: 4px solid $color-gray-separator;
-      gap: 50px;
       flex-basis: 410px;
+
+      border-left: 4px solid $color-gray-separator;
+
+      gap: 50px;
     }
     @include md-xs {
       flex-direction: row;
-      border-top: 4px solid $color-gray-separator;
+
       padding-top: 10px;
+
+      border-top: 4px solid $color-gray-separator;
+
       gap: $gap;
     }
     @include xs {
@@ -85,8 +104,8 @@
     }
   }
   .advantages-item__description {
-    font-size: 18px;
-    line-height: 21px;
     color: $color-primary;
+
+    font-size: 18px;
   }
 }

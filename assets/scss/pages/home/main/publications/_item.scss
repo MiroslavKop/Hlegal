@@ -3,12 +3,15 @@
 
 .publication__item {
   display: inline-block;
+
   max-width: 415px;
-  background-color: $color-white;
-  border-radius: 8px;
   margin-bottom: 40px;
+
+  border-radius: 8px;
+  background-color: $color-white;
+
   @include xs {
-    margin-bottom: 20px;
+    margin-bottom: $gap;
   }
   &-block {
     @include xs {
@@ -19,44 +22,55 @@
     order: 2;
   }
   &-title {
-    font-weight: 400;
-    font-size: 18px;
-    color: $color-act-regular;
     padding-top: $gap;
-    padding-left: $gap;
     padding-right: $gap;
+    padding-left: $gap;
+
+    color: $color-act-regular;
+
+    font-size: 18px;
+    font-weight: 400;
     &:hover {
-      color: $color-accent;
       transition: 0.5s;
+
+      color: $color-accent;
     }
   }
   &-data {
-    font-weight: 700;
-    font-size: 12px;
+    margin-top: 10px;
+    margin-right: $gap;
+    margin-left: $gap;
+    padding-bottom: $gap;
+
     letter-spacing: 1px;
     text-transform: uppercase;
+
     color: $color-gray-text;
-    margin-top: 10px;
-    margin-left: $gap;
-    margin-right: $gap;
-    padding-bottom: $gap;
+
+    font-size: 12px;
+    font-weight: 700;
+
     @include xs-min {
       border-bottom: 4px solid $color-gray-separator;
     }
   }
   &-description {
-    line-height: 22px;
-    color: $color-black;
     margin-top: $gap;
-    padding-left: $gap;
-    padding-right: $gap;
     margin-bottom: $gap;
+    padding-right: $gap;
+    padding-left: $gap;
+
+    color: $color-black;
+
+    line-height: 22px;
+
     @include xs {
       display: none;
     }
   }
   &-img {
-    width: 100%;
     display: block;
+
+    width: 100%;
   }
 }

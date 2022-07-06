@@ -9,13 +9,16 @@
 }
 
 @mixin separator {
-  content: "";
-  display: inline-block;
   position: relative;
   right: 8px;
-  bottom: 1px;
+
+  display: inline-block;
+
   width: 6px;
   height: 6px;
+
+  content: "";
+
   border-radius: 6px;
   background-color: $color-gray-separator;
 }

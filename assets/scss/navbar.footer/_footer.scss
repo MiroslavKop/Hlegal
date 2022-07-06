@@ -5,17 +5,20 @@
   background-color: $color-gray-bg;
 
   &__container {
-    @extend %container;
+    margin: 0 $gap;
     padding-top: 30px;
     padding-bottom: 40px;
+
     border-top: 4px solid $color-gray-separator;
-    margin: 0 20px;
+
+    @extend %container;
     @include md {
       padding-bottom: 40px;
     }
   }
   &__grid {
     display: grid;
+
     @include md-min {
       grid-template-areas: "map rights" "links rights";
       row-gap: $gap;
@@ -28,85 +31,108 @@
     color: $color-primary;
   }
   &__locations {
-    grid-area: map;
     display: flex;
     align-items: center;
+
     gap: 30px;
-    a {
-      @extend %hover-link;
-    }
+    grid-area: map;
     @include md {
       flex-direction: column;
+
+      padding-bottom: $gap;
+
       gap: 10px;
-      padding-bottom: 20px;
+    }
+    a {
+      @extend %hover-link;
     }
   }
   &__locations-link {
     a {
-      font-weight: 700;
-      font-size: 12px;
       letter-spacing: 1px;
       text-transform: uppercase;
+
       color: $color-act-regular;
+
+      font-size: 12px;
+      font-weight: 700;
+
       @include md-min {
         &::before {
-          @include separator;
-          background-color: $color-gray-text;
           right: 10px;
+
+          background-color: $color-gray-text;
+
+          @include separator;
         }
       }
     }
   }
   &__links {
-    grid-area: links;
     display: flex;
     align-items: center;
-    gap: 20px;
+
+    gap: $gap;
+    grid-area: links;
     @include md {
       flex-direction: column;
-      gap: $gap;
+
       padding-bottom: $gap;
+
+      gap: $gap;
     }
   }
   &__phone {
     a {
-      font-weight: 700;
       color: $color-primary-alt;
+
+      font-weight: 700;
+
       @include md-min {
         &::before {
-          @include separator;
-          background-color: $color-gray-text;
           right: 10px;
+
+          background-color: $color-gray-text;
+
+          @include separator;
         }
       }
       &:hover {
-        color: black;
         transition: 0.5s;
+
+        color: black;
       }
     }
   }
   &__mail {
     @include md-min {
       &::before {
-        @include separator;
-        background-color: $color-gray-text;
         right: 10px;
+
+        background-color: $color-gray-text;
+
+        @include separator;
       }
     }
     a {
-      font-weight: 700;
       color: $color-act-regular;
+
+      font-weight: 700;
+
       @extend %hover-link;
     }
   }
 
   &__rights {
-    grid-area: rights;
     display: flex;
     justify-content: flex-end;
+
     color: $color-gray-text;
+
+    grid-area: rights;
     @include md {
       justify-content: center;
+
       text-align: center;
     }
   }
@@ -116,4 +142,7 @@
       color: $color-accent;
     }
   }
+}
+.footer__container--team {
+  border-top: none;
 }

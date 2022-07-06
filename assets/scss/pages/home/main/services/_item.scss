@@ -2,22 +2,26 @@
 @use "mixins" as *;
 .services__item {
   display: grid;
+
   gap: 10px;
   grid-template-rows: auto auto 1fr;
   @include md {
-    grid-template-rows: auto 1fr;
     align-items: center;
+
+    grid-template-rows: auto 1fr;
   }
   &-img {
     @include sm {
-      height: 64px;
       width: 64px;
+      height: 64px;
     }
   }
   &-title {
     color: $color-act-regular;
-    font-weight: 500;
+
     font-size: 18px;
+    font-weight: 500;
+
     @include md-min {
       font-size: 24px;
       line-height: 28px;
@@ -27,16 +31,19 @@
     }
   }
   &-description {
+    color: $color-white;
+
     font-size: 18px;
     line-height: 26px;
-    color: $color-white;
+
     @include md-sm {
       grid-column: 1 / span 3;
     }
     @include sm {
-      grid-column: 1 / span 3;
       font-size: 16px;
       line-height: 22px;
+
+      grid-column: 1 / span 3;
     }
   }
 }

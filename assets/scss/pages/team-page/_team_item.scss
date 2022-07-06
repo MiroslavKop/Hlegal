@@ -1,0 +1,61 @@
+@use "presets" as *;
+@use "mixins" as *;
+
+.team-page__item {
+  display: flex;
+  gap: $gap;
+  @include xs-min {
+    flex-direction: column;
+  }
+  @include xs {
+    align-items: flex-end;
+    span {
+      display: none;
+    }
+  }
+
+  &-img {
+    width: 100%;
+    @include xs {
+      width: 160px;
+      height: 190px;
+    }
+  }
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include xs {
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    svg {
+      color: $color-gray-bg;
+      &:hover {
+        color: $color-white;
+        cursor: pointer;
+      }
+    }
+  }
+  &-title {
+    font-size: 18px;
+    padding-bottom: 5px;
+    color: $color-primary;
+    @extend %hover-link;
+  }
+  &-description {
+    color: $color-gray-text;
+  }
+  &-order-1 {
+    @include xs {
+      order: 6;
+    }
+  }
+  &-order-2 {
+    @include xs {
+      order: 5;
+    }
+  }
+}

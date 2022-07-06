@@ -2,23 +2,29 @@
 @use "mixins" as *;
 
 .publications {
+  padding-top: $gap;
+
   background-color: $color-gray-bg;
-  padding-top: 20px;
+
   @include xs-min {
     position: relative;
-    height: 860px;
+
     overflow: hidden;
+
+    height: 860px;
     padding-top: 40px;
   }
 
   &__container {
+    padding-bottom: $gap;
+
     @extend %container;
-    padding-bottom: 20px;
   }
   &__page-link {
     a {
-      @extend %link-page;
       color: $color-act-regular;
+
+      @extend %link-page;
       img {
         @extend %link-page__img;
       }
@@ -32,31 +38,39 @@
     }
     @include xs {
       display: grid;
+
       grid-template-columns: 1fr;
     }
     @include xs-min {
       &::before {
-        content: "";
-        display: block;
         position: absolute;
-        height: 160px;
-        width: 100%;
         bottom: 0;
-        background: linear-gradient(180deg, rgba(245, 245, 250, 0) 0%, #f5f5fa 86.5%);
         left: 50%;
+
+        display: block;
+
+        width: 100%;
+        height: 160px;
+
+        content: "";
         transform: translateX(-50%);
+
+        background: linear-gradient($bg-gradient3);
       }
     }
   }
   &__page-title {
-    @extend %text-liner-gradient2;
+    margin-bottom: $gap;
+
     font-size: 32px;
     line-height: 38px;
-    margin-bottom: 20px;
+
+    @extend %text-liner-gradient2;
     @include md-min {
+      margin-bottom: 40px;
+
       font-size: 42px;
       line-height: 50px;
-      margin-bottom: 40px;
     }
     @include md-sm {
       font-size: 34px;
@@ -64,30 +78,38 @@
   }
   &__btn {
     display: inline-block;
-    background-color: $color-act-regular;
-    cursor: pointer;
-    border: 1px solid $color-act-regular;
-    border-radius: 12px;
+
     min-width: 250px;
     min-height: 50px;
     padding: 3px;
-    color: $color-white;
-    font-weight: 700;
+
+    cursor: pointer;
     text-align: center;
-    box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
-    &:hover {
-      background-color: $color-act-hover;
-      transition: 0.5s;
-    }
+
+    color: $color-white;
+    border: 1px solid $color-act-regular;
+    border-radius: 12px;
+    background-color: $color-act-regular;
+    box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+
+    font-weight: 700;
+
     @include xs-min {
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
       bottom: 20px;
+      left: 50%;
+
+      transform: translateX(-50%);
     }
     @include xs {
       order: 3;
+
       margin: 0 auto;
+    }
+    &:hover {
+      transition: 0.5s;
+
+      background-color: $color-act-hover;
     }
   }
 }

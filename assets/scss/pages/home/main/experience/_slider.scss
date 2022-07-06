@@ -96,11 +96,12 @@
   &__note {
     position: absolute;
     z-index: -9999;
+
+    opacity: 0;
+
     @include xs {
       min-height: 250px;
     }
-
-    opacity: 0;
 
     &.active {
       position: static;
@@ -139,6 +140,7 @@
   &__indicators {
     display: flex;
     justify-content: center;
+
     gap: 14px;
   }
 
@@ -149,8 +151,8 @@
     opacity: 0.2;
     border-radius: $size * 0.5;
     background-color: $color-act-regular;
-    @extend %hover-slider;
 
+    @extend %hover-slider;
     @include md-min {
       display: none;
     }

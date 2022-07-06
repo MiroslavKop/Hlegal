@@ -2,10 +2,12 @@
 @use "mixins" as *;
 
 .achievments {
-  background-color: $color-gray-bg;
-  border-radius: 12px 12px 0px 0px;
   margin-top: 95px;
   padding-bottom: 30px;
+
+  border-radius: 12px 12px 0 0;
+  background-color: $color-gray-bg;
+
   @include md {
     margin-top: 30px;
   }
@@ -14,26 +16,32 @@
     @extend %container;
   }
   &__title {
-    text-align: center;
     padding: 30px 0;
-    font-size: 14px;
+
+    text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
+
     color: $color-primary;
+
+    font-size: 14px;
   }
   &__grid {
     display: grid;
+
     gap: 40px;
     grid-template-columns: repeat(4, 1fr);
     @include sm {
-      grid-template-columns: 45% 45%;
       align-items: center;
       justify-content: center;
+
       gap: $gap;
+      grid-template-columns: 45% 45%;
     }
   }
   &__grid-img {
     width: 100%;
+
     @include lg-sm {
     }
   }
@@ -51,8 +59,10 @@
 .slider__indicators--team {
   display: flex;
   justify-content: center;
-  gap: 14px;
+
   padding-top: 20px;
+
+  gap: 14px;
 }
 .slider__indicator--team {
   width: $size;
@@ -61,6 +71,7 @@
   opacity: 0.2;
   border-radius: $size * 0.5;
   background-color: $color-act-regular;
+
   @extend %hover-slider;
 
   &.active {

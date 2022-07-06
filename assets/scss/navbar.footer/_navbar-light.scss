@@ -7,6 +7,7 @@
 }
 .navbar__menu-link-light {
   color: $color-act-regular;
+
   @extend %hover-link;
 }
 .navbar__actions-language-link-light {

@@ -2,37 +2,45 @@
 @use "mixins" as *;
 .services {
   position: relative;
+
+  border-radius: 0 0 12px 12px;
   background: linear-gradient($bg-gradient2);
-  border-radius: 0px 0px 12px 12px;
 
   &::before {
-    content: "";
     position: absolute;
-    top: 100%;
-    left: 20px;
-    right: 20px;
-    height: 10px;
-    background-color: $background-services1;
-    border-radius: 0px 0px 12px 12px;
     z-index: 2;
+    top: 100%;
+    right: 20px;
+    left: 20px;
+
+    height: 10px;
+
+    content: "";
+
+    border-radius: 0 0 12px 12px;
+    background-color: $background-services1;
   }
   &::after {
-    content: "";
     position: absolute;
     top: 100%;
-    left: 40px;
     right: 40px;
+    left: 40px;
+
     height: 20px;
+
+    content: "";
+
+    border-radius: 0 0 12px 12px;
     background-color: $background-services2;
-    border-radius: 0px 0px 12px 12px;
   }
   &__container {
     @extend %container;
   }
   &__page-link {
     a {
-      @extend %link-page;
       color: $color-gray-text;
+
+      @extend %link-page;
       img {
         @extend %link-page__img;
       }
@@ -40,16 +48,17 @@
   }
   &__grid {
     display: grid;
+
     margin-top: 20px;
     padding-bottom: 20px;
-    gap: 90px 40px;
 
+    gap: 90px 40px;
     @include md-min {
-      grid-template-columns: repeat(3, 1fr);
       margin-top: 70px;
       padding-bottom: 80px;
-    }
 
+      grid-template-columns: repeat(3, 1fr);
+    }
     @include md-sm {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -58,13 +67,16 @@
     }
   }
   &__page-title {
-    @extend %text-liner-gradient;
+    padding-top: 10px;
+
     font-size: 32px;
     line-height: 38px;
-    padding-top: 10px;
+
+    @extend %text-liner-gradient;
     @include md-min {
-      font-size: 42px;
       width: max-content;
+
+      font-size: 42px;
     }
     @include md-sm {
       font-size: 36px;

@@ -4,38 +4,49 @@
 .cases__main {
   display: flex;
   flex-direction: column;
+
   background-color: $color-gray-bg;
+
   @include lg-xs {
-    grid-column-start: 1;
     grid-column-end: 3;
+    grid-column-start: 1;
   }
   &-item {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    border-top: 3px solid $color-white;
+
     padding: $gap;
+
+    border-top: 3px solid $color-white;
+
     gap: $gap;
     @include lg-min {
       height: 200px;
     }
   }
   &-title {
-    font-size: 14px;
-    line-height: 17px;
+    padding: $gap;
+
     letter-spacing: 1px;
     text-transform: uppercase;
+
     color: $color-accent;
-    padding: $gap;
+
+    font-size: 14px;
+    line-height: 17px;
   }
 }
 .cases__item {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+  padding: $gap;
+
   background-color: $color-gray-bg;
-  padding: 20px;
-  gap: 20px;
+
+  gap: $gap;
   @include lg-sm {
     min-height: 200px;
   }
@@ -45,23 +56,27 @@
   @include lg-xs {
     align-items: center;
     justify-content: center;
+
     text-align: center;
     &:nth-child(1) {
-      grid-column-start: 1;
       grid-column-end: 3;
+      grid-column-start: 1;
     }
   }
 
   &-description {
-    font-size: 18px;
     color: $color-primary-soft;
+
+    font-size: 18px;
     font-weight: 500;
+
     @include sm-min {
       font-size: 24px;
     }
   }
   &-link {
-    font-size: 18px;
     color: $color-gray-text;
+
+    font-size: 18px;
   }
 }
