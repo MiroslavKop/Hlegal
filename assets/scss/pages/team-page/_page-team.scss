@@ -2,8 +2,9 @@
 @use "mixins" as *;
 
 .team-page {
-  padding-top: 220px;
   margin-bottom: 60px;
+  padding-top: 220px;
+
   @include xs {
     margin-bottom: 40px;
     padding-top: 125px;
@@ -20,27 +21,30 @@
 
     @extend %text-liner-gradient2;
     @include md-min {
-      font-size: 42px;
-      line-height: 50px;
-      margin-left: 220px;
       margin-right: 220px;
       margin-bottom: 80px;
+      margin-left: 220px;
+
+      font-size: 42px;
+      line-height: 50px;
     }
     @include md-xs {
-      font-size: 34px;
       text-align: center;
+
+      font-size: 34px;
     }
   }
   .team__page-content {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+
     gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
     @include md-xs {
       grid-template-columns: 1fr 1fr;
     }
     @include xs {
-      grid-template-columns: 1fr;
       gap: 20px;
+      grid-template-columns: 1fr;
     }
   }
 }

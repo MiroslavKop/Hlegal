@@ -3,6 +3,7 @@
 
 .team-page__item {
   display: flex;
+
   gap: $gap;
   @include xs-min {
     flex-direction: column;
@@ -16,6 +17,7 @@
 
   &-img {
     width: 100%;
+
     @include xs {
       width: 160px;
       height: 190px;
@@ -23,26 +25,33 @@
   }
   &-wrapper {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+
     @include xs {
-      flex-direction: column;
-      gap: 10px;
-      justify-content: center;
       align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+
+      gap: 10px;
     }
     svg {
       color: $color-gray-bg;
       &:hover {
-        color: $color-white;
         cursor: pointer;
+
+        color: $color-white;
       }
     }
   }
   &-title {
-    font-size: 18px;
     padding-bottom: 5px;
+
     color: $color-primary;
+
+    font-size: 18px;
+    font-weight: 500;
+
     @extend %hover-link;
   }
   &-description {

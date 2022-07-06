@@ -44,26 +44,26 @@
       }
     }
   }
-  .slider__indicators--team {
-    display: flex;
-    justify-content: center;
+}
+.slider__indicators--team {
+  display: flex;
+  justify-content: center;
 
-    padding-top: 20px;
+  padding-top: 20px;
 
-    gap: 14px;
-  }
-  .slider__indicator--team {
-    width: $size;
-    height: $size;
+  gap: 14px;
+}
+.slider__indicator--team {
+  width: $size;
+  height: $size;
 
-    opacity: 0.2;
-    border-radius: $size * 0.5;
-    background-color: $color-act-regular;
+  opacity: 0.2;
+  border-radius: $size * 0.5;
+  background-color: $color-act-regular;
 
-    @extend %hover-slider;
+  @extend %hover-slider;
 
-    &.active {
-      opacity: 1;
-    }
+  &.active {
+    opacity: 1;
   }
 }
