@@ -351,7 +351,7 @@ template {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .profile__info-name, .team-page__title, .quality__title, .introduction__info-title, .publications__page-title, .team__content-title {
@@ -361,7 +361,7 @@ template {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 /* ul */
