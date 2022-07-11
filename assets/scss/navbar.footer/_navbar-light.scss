@@ -15,8 +15,9 @@
 }
 .navbar__actions-location-link-light {
   color: $color-gray-text;
-}
 
+  @extend %hover-link;
+}
 .navbar__actions-phone-link-light {
   color: $color-gray-text;
 }
@@ -30,6 +31,8 @@
   background-color: $color-primary;
 }
 .accent {
+  width: max-content;
+
   color: $color-accent;
   border-bottom: 2px solid $color-accent;
 }

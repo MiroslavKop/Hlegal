@@ -35,6 +35,7 @@
   font-size: 96px;
   line-height: 113px;
 
+  @extend %hover-link;
   @include md-sm {
     font-size: 50px;
     line-height: 60px;

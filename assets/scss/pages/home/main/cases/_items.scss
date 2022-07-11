@@ -11,6 +11,11 @@
     grid-column-end: 3;
     grid-column-start: 1;
   }
+  &:hover {
+    transition: 0.25s;
+
+    background: $color-gray-bgalt;
+  }
   &-item {
     display: flex;
     flex-direction: column;
@@ -35,6 +40,12 @@
 
     font-size: 14px;
     line-height: 17px;
+    &:hover {
+      cursor: pointer;
+
+      opacity: 0.6;
+      color: $color-act-hover;
+    }
   }
 }
 .cases__item {
@@ -63,13 +74,19 @@
       grid-column-start: 1;
     }
   }
+  &:hover {
+    transition: 0.25s;
 
-  &-description {
+    background: $color-gray-bgalt;
+  }
+
+  &-title {
     color: $color-primary-soft;
 
     font-size: 18px;
     font-weight: 500;
 
+    @extend %hover-link;
     @include sm-min {
       font-size: 24px;
     }

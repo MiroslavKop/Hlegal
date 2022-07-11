@@ -190,6 +190,9 @@
         display: none;
       }
     }
+    &-location-link {
+      @extend %hover-link;
+    }
     &-phones {
       @include lg-min {
         &::before {
@@ -201,6 +204,8 @@
       white-space: nowrap;
 
       font-weight: 700;
+
+      @extend %hover-link;
     }
     &-socials {
       @include lg-min {

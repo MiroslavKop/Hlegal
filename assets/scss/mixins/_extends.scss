@@ -55,7 +55,7 @@
 %text-liner-gradient {
   background: linear-gradient($text-gradient1);
   -webkit-background-clip: text;
-  background-clip: text;
+          background-clip: text;
 
   -webkit-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
@@ -64,7 +64,7 @@
 %text-liner-gradient2 {
   background: linear-gradient($text-gradient2);
   -webkit-background-clip: text;
-  background-clip: text;
+          background-clip: text;
 
   -webkit-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
